@@ -21,6 +21,7 @@ const scene = new THREE.Scene()
 // Objects
 const geometry = new THREE.SphereGeometry( 0.5, 64, 64)
 const geometry2 = new THREE.SphereGeometry(0.2,64,64)
+const geometry3 = new THREE.SphereGeometry(0.05,64,64)
 
 // Materials
 
@@ -39,18 +40,18 @@ material2.color = new THREE.Color(0xffffff)
 // Mesh
 const sphere = new THREE.Mesh(geometry,material2)
 const sphere2 = new THREE.Mesh(geometry2, material2)
-const sphere3 = new THREE.Mesh(geometry2, material2)
+const sphere3 = new THREE.Mesh(geometry3, material2)
 const sphere4 = new THREE.Mesh(geometry2, material2)
 const sphere5 = new THREE.Mesh(geometry2, material2)
 sphere2.position.set(1,0,0)
-sphere3.position.set(-1,0,0)
+sphere3.position.set(1.5,0,0)
 sphere4.position.set(0,1,0)
 sphere5.position.set(0,-1,0)
 scene.add(sphere)
 scene.add(sphere2)
 scene.add(sphere3)
-scene.add(sphere4)
-scene.add(sphere5)
+// scene.add(sphere4)
+// scene.add(sphere5)
 
 // Lights
 
@@ -108,14 +109,14 @@ smallSphere.add(sphere2.position, 'z').min(-3).max(3).step(0.01)
  * Sizes
  */
 const sizes = {
-    width: window.innerWidth,
+    width: window.innerWidth * 0.7,
     height: window.innerHeight
 }
 
 window.addEventListener('resize', () =>
 {
     // Update sizes
-    sizes.width = window.innerWidth
+    sizes.width = window.innerWidth * 0.7
     sizes.height = window.innerHeight
 
     // Update camera
