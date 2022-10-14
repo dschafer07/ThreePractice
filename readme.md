@@ -1,5 +1,5 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
+# Sphere Scene - Practice
+David Schafer
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
