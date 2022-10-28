@@ -42,11 +42,11 @@ const sphere = new THREE.Mesh(geometry,material2)
 const sphere2 = new THREE.Mesh(geometry2, material2)
 const sphere3 = new THREE.Mesh(geometry3, material2)
 const sphere4 = new THREE.Mesh(geometry2, material2)
-const sphere5 = new THREE.Mesh(geometry2, material2)
+const sphere5 = new THREE.Mesh(geometry3, material2)
 sphere2.position.set(1,0,0)
 sphere3.position.set(1.5,0,0)
-sphere4.position.set(0,1,0)
-sphere5.position.set(0,-1,0)
+sphere4.position.set(0,0,1)
+sphere5.position.set(0,0,1.5)
 scene.add(sphere)
 scene.add(sphere2)
 scene.add(sphere3)
@@ -174,9 +174,9 @@ const tick = () =>
     backLight.intensity = Math.abs((Math.sin(elapsedTime/3) * 5))
     frontLight.intensity = Math.abs((Math.cos(elapsedTime/3) * 5)) 
     
-    camera.position.x = Math.sin(elapsedTime) 
-    camera.position.y = Math.cos(elapsedTime) 
-    camera.position.z = Math.sin(elapsedTime) + 1
+    // camera.position.x = Math.sin(elapsedTime) 
+    // camera.position.y = Math.cos(elapsedTime) 
+    // camera.position.z = Math.sin(elapsedTime) + 1
 
     camera.lookAt(0,0,0)
     // Update Orbital Controls
